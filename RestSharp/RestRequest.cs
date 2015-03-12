@@ -385,7 +385,7 @@ namespace RestSharp
 		/// Container of all HTTP parameters to be passed with the request. 
 		/// See AddParameter() for explanation of the types of parameters that can be passed
 		/// </summary>
-		public List<Parameter> Parameters { get; private set; }
+		public List<Parameter> Parameters { get; set; }
 
 		/// <summary>
 		/// Container of all the files to be uploaded with the request.
