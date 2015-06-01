@@ -1,4 +1,4 @@
-﻿//
+//
 // Authors:
 //   Patrik Torstensson (Patrik.Torstensson@labs2.com)
 //   Wictor WilÃ©n (decode/encode functions) (wictor@ibizkit.se)

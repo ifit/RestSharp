@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 #if NET4
 using System.Threading.Tasks;

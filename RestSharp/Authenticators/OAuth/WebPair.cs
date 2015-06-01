@@ -1,4 +1,4 @@
-﻿namespace RestSharp.Authenticators.OAuth
+namespace RestSharp.Authenticators.OAuth
 {
 	internal class WebPair
 	{

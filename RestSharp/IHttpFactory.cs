@@ -1,4 +1,4 @@
-﻿namespace RestSharp
+namespace RestSharp
 {
 	public interface IHttpFactory
 	{
