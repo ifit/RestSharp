@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{E709A928
 		restsharp.nuspec = restsharp.nuspec
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharp.Build", "RestSharp.Build\RestSharp.Build.csproj", "{CCC30138-3D68-44D8-AF1A-D22F769EE8DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,18 @@ Global
 		{2ECECFBF-5F3E-40EE-A963-72336DC7ABE2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{2ECECFBF-5F3E-40EE-A963-72336DC7ABE2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{2ECECFBF-5F3E-40EE-A963-72336DC7ABE2}.Release|x86.ActiveCfg = Release|Any CPU
+		{CCC30138-3D68-44D8-AF1A-D22F769EE8DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCC30138-3D68-44D8-AF1A-D22F769EE8DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCC30138-3D68-44D8-AF1A-D22F769EE8DC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CCC30138-3D68-44D8-AF1A-D22F769EE8DC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CCC30138-3D68-44D8-AF1A-D22F769EE8DC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CCC30138-3D68-44D8-AF1A-D22F769EE8DC}.Debug|x86.Build.0 = Debug|Any CPU
+		{CCC30138-3D68-44D8-AF1A-D22F769EE8DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCC30138-3D68-44D8-AF1A-D22F769EE8DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCC30138-3D68-44D8-AF1A-D22F769EE8DC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CCC30138-3D68-44D8-AF1A-D22F769EE8DC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CCC30138-3D68-44D8-AF1A-D22F769EE8DC}.Release|x86.ActiveCfg = Release|Any CPU
+		{CCC30138-3D68-44D8-AF1A-D22F769EE8DC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
