@@ -38,13 +38,11 @@ namespace RestSharp.Authenticators.OAuth
 		/// <summary>
 		/// All text parameters are UTF-8 encoded (per section 5.1).
 		/// </summary>
-		/// <seealso cref="http://www.hueniverse.com/hueniverse/2008/10/beginners-gui-1.html"/> 
 		private static readonly Encoding _encoding = Encoding.UTF8;
 
 		/// <summary>
 		/// Generates a random 16-byte lowercase alphanumeric string. 
 		/// </summary>
-		/// <seealso cref="http://oauth.net/core/1.0#nonce"/>
 		/// <returns></returns>
 		public static string GetNonce()
 		{
@@ -64,7 +62,6 @@ namespace RestSharp.Authenticators.OAuth
 		/// <summary>
 		/// Generates a timestamp based on the current elapsed seconds since '01/01/1970 0000 GMT"
 		/// </summary>
-		/// <seealso cref="http://oauth.net/core/1.0#nonce"/>
 		/// <returns></returns>
 		public static string GetTimestamp()
 		{
@@ -74,7 +71,6 @@ namespace RestSharp.Authenticators.OAuth
 		/// <summary>
 		/// Generates a timestamp based on the elapsed seconds of a given time since '01/01/1970 0000 GMT"
 		/// </summary>
-		/// <seealso cref="http://oauth.net/core/1.0#nonce"/>
 		/// <param name="dateTime">A specified point in time.</param>
 		/// <returns></returns>
 		public static string GetTimestamp(DateTime dateTime)
@@ -86,7 +82,6 @@ namespace RestSharp.Authenticators.OAuth
 		/// <summary>
 		/// The set of characters that are unreserved in RFC 2396 but are NOT unreserved in RFC 3986.
 		/// </summary>
-		/// <seealso cref="http://stackoverflow.com/questions/846487/how-to-get-uri-escapedatastring-to-comply-with-rfc-3986" />
 		private static readonly string[] UriRfc3986CharsToEscape = new[] { "!", "*", "'", "(", ")" };
 
 		private static readonly string[] UriRfc3968EscapedHex = new[] {"%21", "%2A", "%27", "%28", "%29"};
@@ -104,8 +99,6 @@ namespace RestSharp.Authenticators.OAuth
 		/// actually worked (which in my experiments it <i>doesn't</i>), we can't rely on every
 		/// host actually having this configuration element present.
 		/// </remarks>
-		/// <seealso cref="http://oauth.net/core/1.0#encoding_parameters" />
-		/// <seealso cref="http://stackoverflow.com/questions/846487/how-to-get-uri-escapedatastring-to-comply-with-rfc-3986" />
 		public static string UrlEncodeRelaxed(string value)
 		{
 			// Start with RFC 2396 escaping by calling the .NET method to do the work.
@@ -131,7 +124,6 @@ namespace RestSharp.Authenticators.OAuth
 		/// upper-casing hexadecimal characters, and UTF-8 encoding for text value pairs.
 		/// </summary>
 		/// <param name="value"></param>
-		/// <seealso cref="http://oauth.net/core/1.0#encoding_parameters" />
 		public static string UrlEncodeStrict(string value)
 		{
 			// [JD]: We need to escape the apostrophe as well or the signature will fail
@@ -150,7 +142,6 @@ namespace RestSharp.Authenticators.OAuth
 		/// concatenating them into a single string. This string should be encoded
 		/// prior to, or after normalization is run.
 		/// </summary>
-		/// <seealso cref="http://oauth.net/core/1.0#rfc.section.9.1.1"/>
 		/// <param name="parameters"></param>
 		/// <returns></returns>
 		public static string NormalizeRequestParameters(WebParameterCollection parameters)
@@ -185,7 +176,6 @@ namespace RestSharp.Authenticators.OAuth
 		/// Resulting URLs must exclude port 80 or port 443 when accompanied by HTTP and HTTPS, respectively.
 		/// Resulting URLs must be lower case.
 		/// </summary>
-		/// <seealso cref="http://oauth.net/core/1.0#rfc.section.9.1.2"/>
 		/// <param name="url">The original request URL</param>
 		/// <returns></returns>
 		public static string ConstructRequestUrl(Uri url)
@@ -213,8 +203,6 @@ namespace RestSharp.Authenticators.OAuth
 		/// Creates a request elements concatentation value to send with a request. 
 		/// This is also known as the signature base.
 		/// </summary>
-		/// <seealso cref="http://oauth.net/core/1.0#rfc.section.9.1.3"/>
-		/// <seealso cref="http://oauth.net/core/1.0#sig_base_example"/>
 		/// <param name="method">The request's HTTP method type</param>
 		/// <param name="url">The request URL</param>
 		/// <param name="parameters">The request's parameters</param>
@@ -239,7 +227,6 @@ namespace RestSharp.Authenticators.OAuth
 		/// Creates a signature value given a signature base and the consumer secret.
 		/// This method is used when the token secret is currently unknown.
 		/// </summary>
-		/// <seealso cref="http://oauth.net/core/1.0#rfc.section.9.2"/>
 		/// <param name="signatureMethod">The hashing method</param>
 		/// <param name="signatureBase">The signature base</param>
 		/// <param name="consumerSecret">The consumer key</param>
@@ -253,7 +240,6 @@ namespace RestSharp.Authenticators.OAuth
 		/// Creates a signature value given a signature base and the consumer secret.
 		/// This method is used when the token secret is currently unknown.
 		/// </summary>
-		/// <seealso cref="http://oauth.net/core/1.0#rfc.section.9.2"/>
 		/// <param name="signatureMethod">The hashing method</param>
 		/// <param name="signatureTreatment">The treatment to use on a signature value</param>
 		/// <param name="signatureBase">The signature base</param>
@@ -267,7 +253,6 @@ namespace RestSharp.Authenticators.OAuth
 		/// <summary>
 		/// Creates a signature value given a signature base and the consumer secret and a known token secret.
 		/// </summary>
-		/// <seealso cref="http://oauth.net/core/1.0#rfc.section.9.2"/>
 		/// <param name="signatureMethod">The hashing method</param>
 		/// <param name="signatureBase">The signature base</param>
 		/// <param name="consumerSecret">The consumer secret</param>
@@ -281,7 +266,6 @@ namespace RestSharp.Authenticators.OAuth
 		/// <summary>
 		/// Creates a signature value given a signature base and the consumer secret and a known token secret.
 		/// </summary>
-		/// <seealso cref="http://oauth.net/core/1.0#rfc.section.9.2"/>
 		/// <param name="signatureMethod">The hashing method</param>
 		/// <param name="signatureTreatment">The treatment to use on a signature value</param>
 		/// <param name="signatureBase">The signature base</param>
